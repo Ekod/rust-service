@@ -1,7 +1,5 @@
-use actix_web::{web, HttpResponse};
+use actix_web::HttpResponse;
 
-use super::FormData;
-
-pub async fn health_check(_form: web::Form<FormData>) -> HttpResponse {
+pub async fn health_check() -> HttpResponse {
     HttpResponse::Ok().finish()
 }
